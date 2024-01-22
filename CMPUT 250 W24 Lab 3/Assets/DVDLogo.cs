@@ -12,6 +12,12 @@ public class DVDLogo : MonoBehaviour
 
     //Current direction
     private Vector3 direction;
+    
+    public List<Sprite> sprites;
+
+    public SpriteRenderer spriteRenderer;
+
+    private int count = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +25,6 @@ public class DVDLogo : MonoBehaviour
         //Randomly initialize direction
         direction = new Vector3(Random.Range(-1f,1f), Random.Range(-1f,1f));
         direction.Normalize();
-
     }
 
     private void FlipDirectionX(){
@@ -46,17 +51,28 @@ public class DVDLogo : MonoBehaviour
         //See if a bounce needs to happen before moving
         if (newPosition.x>X_Max){
             FlipDirectionX();
+            count = (count + 1)%2;
+            spriteRenderer.sprite = sprites[count];
             
         }
         else if (newPosition.x<-1*X_Max){
             FlipDirectionX();
+            spriteRenderer.sprite = sprites[Random.Range(0,2)];
+            count = (count + 1)%2;
+            spriteRenderer.sprite = sprites[count];
         }
 
         if (newPosition.y>Y_Max){
             FlipDirectionY();
+            spriteRenderer.sprite = sprites[Random.Range(0,2)];
+            count = (count + 1)%2;
+            spriteRenderer.sprite = sprites[count];
         }
         else if (newPosition.y<-1*Y_Max){
             FlipDirectionY();
+            spriteRenderer.sprite = sprites[Random.Range(0,2)];
+            count = (count + 1)%2;
+            spriteRenderer.sprite = sprites[count];
         }
 
         transform.position += direction*Time.deltaTime*speed;
