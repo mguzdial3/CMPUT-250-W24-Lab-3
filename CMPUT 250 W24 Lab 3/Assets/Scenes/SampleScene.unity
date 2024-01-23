@@ -566,7 +566,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is a bouncing ball
+  m_Text: DON'T PANIC!
 --- !u!222 &2098954804
 CanvasRenderer:
   m_ObjectHideFlags: 0
