@@ -27,6 +27,8 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        float change_scale = Random.Range(0 , 3f);
+        transform.localScale += new Vector3(change_scale,change_scale,change_scale);
     }
 
     private void FlipDirectionY(){
@@ -34,6 +36,8 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        float change_scale = Random.Range(0 , 3f);
+        transform.localScale -= new Vector3(change_scale,change_scale,change_scale);
     }
 
     // Update is called once per frame
@@ -60,5 +64,6 @@ public class DVDLogo : MonoBehaviour
         }
 
         transform.position += direction*Time.deltaTime*speed;
+
     }
 }
