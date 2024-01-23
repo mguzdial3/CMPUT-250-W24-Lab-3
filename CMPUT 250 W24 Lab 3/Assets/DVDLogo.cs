@@ -5,13 +5,18 @@ using UnityEngine;
 public class DVDLogo : MonoBehaviour
 {
     //Speed it moves at
-    public float speed = 3;
+    public float speed = 4;
 
     //Bounds of the screen (could get these with camera bounds but we can do this since it's a fixed camera)
     public float X_Max = 5, Y_Max = 4;
 
     //Current direction
     private Vector3 direction;
+
+    // Logo size variables
+    public float minSize = 0.5f;
+    public float maxSize = 2.0f;
+    private float currentSize;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +63,9 @@ public class DVDLogo : MonoBehaviour
         else if (newPosition.y<-1*Y_Max){
             FlipDirectionY();
         }
+
+        currentSize = Mathf.PingPong(Time.time, maxSize - minSize) + minSize;
+        transform.localScale = new Vector3(currentSize, currentSize, 1);
 
         transform.position += direction*Time.deltaTime*speed;
     }
