@@ -27,6 +27,7 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        transform.localScale *= 0.9f; // To shrink the ball by 10% each time it bounces
     }
 
     private void FlipDirectionY(){
@@ -34,6 +35,7 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        transform.localScale *= 0.9f; // To shrink the ball by 10% each time it bounces
     }
 
     // Update is called once per frame
