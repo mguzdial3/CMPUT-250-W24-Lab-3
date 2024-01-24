@@ -13,6 +13,9 @@ public class DVDLogo : MonoBehaviour
     //Current direction
     private Vector3 direction;
 
+    private Color color;
+    public SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,19 +49,29 @@ public class DVDLogo : MonoBehaviour
         //See if a bounce needs to happen before moving
         if (newPosition.x>X_Max){
             FlipDirectionX();
+            randomizeColor();
             
         }
         else if (newPosition.x<-1*X_Max){
             FlipDirectionX();
+            randomizeColor();
         }
 
         if (newPosition.y>Y_Max){
             FlipDirectionY();
+            randomizeColor();
         }
         else if (newPosition.y<-1*Y_Max){
             FlipDirectionY();
+            randomizeColor();
         }
 
         transform.position += direction*Time.deltaTime*speed;
+    }
+
+
+    void randomizeColor(){
+        color = new Color(Random.Range(0,1f), Random.Range(0,1f), Random.Range(0,1f));
+        spriteRenderer.color = color;
     }
 }
