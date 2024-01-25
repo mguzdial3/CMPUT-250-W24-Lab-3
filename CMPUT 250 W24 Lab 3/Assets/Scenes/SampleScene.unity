@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 421997421}
   - component: {fileID: 421997422}
   m_Layer: 0
-  m_Name: Bouncing Ball
+  m_Name: Bouncing Heart Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   speed: 3
   X_Max: 5
   Y_Max: 4
+  rotationSpd: 108
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +263,7 @@ GameObject:
   - component: {fileID: 755472558}
   - component: {fileID: 755472559}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Heart Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,7 +322,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e7069a7db07f489a87c0797b3ff2165, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f3819e87e4b27c4e96f607314e31bc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -566,7 +567,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is a bouncing ball
+  m_Text: This is a Heart Tank
 --- !u!222 &2098954804
 CanvasRenderer:
   m_ObjectHideFlags: 0
