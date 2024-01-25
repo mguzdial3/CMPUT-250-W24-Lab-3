@@ -41,7 +41,7 @@ public class DVDLogo : MonoBehaviour
     {
         //Move in direction unless we'd go out of bounds, if so bounce with some randomness
 
-        Vector3 newPosition = transform.position + direction*Time.deltaTime*speed;
+        Vector3 newPosition = transform.position + direction*Time.deltaTime*10;
 
         //See if a bounce needs to happen before moving
         if (newPosition.x>X_Max){
@@ -59,6 +59,6 @@ public class DVDLogo : MonoBehaviour
             FlipDirectionY();
         }
 
-        transform.position += direction*Time.deltaTime*speed;
+        transform.position += direction*Time.deltaTime*10;
     }
 }
