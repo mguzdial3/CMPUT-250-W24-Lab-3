@@ -13,6 +13,9 @@ public class DVDLogo : MonoBehaviour
     //Current direction
     private Vector3 direction;
 
+    //Speed of Rotation
+    public float rotationSpd = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +39,17 @@ public class DVDLogo : MonoBehaviour
         direction.Normalize();
     }
 
+    private void RotateSprite(){
+        transform.eulerAngles += new Vector3(0, 0, rotationSpd)*Time.deltaTime;
+    }
+
     // Update is called once per frame
     void Update()
     {
         //Move in direction unless we'd go out of bounds, if so bounce with some randomness
 
         Vector3 newPosition = transform.position + direction*Time.deltaTime*speed;
+        RotateSprite();
 
         //See if a bounce needs to happen before moving
         if (newPosition.x>X_Max){
