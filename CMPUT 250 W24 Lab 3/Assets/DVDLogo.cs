@@ -27,6 +27,7 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        RandomSize();
     }
 
     private void FlipDirectionY(){
@@ -34,6 +35,15 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        RandomSize();
+    }
+
+    // change the size randomly
+    // https://stackoverflow.com/questions/21636306/scale-gameobject-in-unity
+    private void RandomSize()
+    {
+        float henshin = Random.Range(0.25f, 2.5f);
+        transform.localScale = new Vector3(henshin, henshin);
     }
 
     // Update is called once per frame

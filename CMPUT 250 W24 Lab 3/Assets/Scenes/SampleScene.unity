@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 755472558}
   - component: {fileID: 755472559}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: replacd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,7 +277,7 @@ Transform:
   m_GameObject: {fileID: 755472557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 421997421}
   m_RootOrder: 0
@@ -321,7 +321,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e7069a7db07f489a87c0797b3ff2165, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9477069dfbeab141827f50768522f2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -556,17 +556,17 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is a bouncing ball
+  m_Text: "WcDonald\u2018s Is As Good As jPhone \n\t\t\t\t\t\t\t\t\t\t\t\t--\u03B2ili\u03B2ili"
 --- !u!222 &2098954804
 CanvasRenderer:
   m_ObjectHideFlags: 0
