@@ -5,7 +5,7 @@ using UnityEngine;
 public class DVDLogo : MonoBehaviour
 {
     //Speed it moves at
-    public float speed = 3;
+    public float speed = 10;
 
     //Bounds of the screen (could get these with camera bounds but we can do this since it's a fixed camera)
     public float X_Max = 5, Y_Max = 4;
@@ -60,5 +60,7 @@ public class DVDLogo : MonoBehaviour
         }
 
         transform.position += direction*Time.deltaTime*speed;
+        transform.Rotate (0,0,50*Time.deltaTime);
+
     }
 }
