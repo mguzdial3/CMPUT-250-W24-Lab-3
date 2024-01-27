@@ -277,7 +277,7 @@ Transform:
   m_GameObject: {fileID: 755472557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 421997421}
   m_RootOrder: 0
@@ -321,7 +321,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e7069a7db07f489a87c0797b3ff2165, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 143c252f1f09c5745b7d98e3bfb81c26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is a bouncing ball
+  m_Text: This is a chunky cat
 --- !u!222 &2098954804
 CanvasRenderer:
   m_ObjectHideFlags: 0
