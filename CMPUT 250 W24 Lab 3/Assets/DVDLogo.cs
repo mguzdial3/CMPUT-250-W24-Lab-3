@@ -58,6 +58,9 @@ public class DVDLogo : MonoBehaviour
         else if (newPosition.y<-1*Y_Max){
             FlipDirectionY();
         }
+        // following lines make the ball grow and shrink
+        float scaleFactor = Mathf.PingPong(Time.time, 1) + 1; // PingPong between 1 and 2
+        transform.localScale = new Vector3(scaleFactor, scaleFactor, 1);
 
         transform.position += direction*Time.deltaTime*speed;
     }
