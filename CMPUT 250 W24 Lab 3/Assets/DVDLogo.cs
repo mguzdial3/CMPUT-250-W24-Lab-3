@@ -13,6 +13,11 @@ public class DVDLogo : MonoBehaviour
     //Current direction
     private Vector3 direction;
 
+    // Minimum and maximum scale values
+    public float minScale = 0.5f;
+    public float maxScale = 2.0f;
+    public float scaleChangeRate = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +63,11 @@ public class DVDLogo : MonoBehaviour
         else if (newPosition.y<-1*Y_Max){
             FlipDirectionY();
         }
+
+        // Update scale based on movement
+        float newScale = Mathf.Clamp(transform.localScale.x + scaleChangeRate * Time.deltaTime, minScale, maxScale);
+        transform.localScale = new Vector3(newScale, newScale, 1.0f);
+
 
         transform.position += direction*Time.deltaTime*speed;
     }
