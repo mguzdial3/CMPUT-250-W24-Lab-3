@@ -13,6 +13,8 @@ public class DVDLogo : MonoBehaviour
     //Current direction
     private Vector3 direction;
 
+    public GameObject duck;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        duck.transform.localScale += new Vector3(0.5f, 0, 0);
     }
 
     private void FlipDirectionY(){
@@ -34,6 +37,7 @@ public class DVDLogo : MonoBehaviour
         direction.x+= Random.Range(-0.1f,0.1f);
         direction.y+= Random.Range(-0.1f,0.1f);
         direction.Normalize();
+        duck.transform.localScale += new Vector3(0.5f, 0, 0);
     }
 
     // Update is called once per frame
