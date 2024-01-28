@@ -36,6 +36,14 @@ public class DVDLogo : MonoBehaviour
         direction.Normalize();
     }
 
+    private void HueShift()
+    {
+        SpriteRenderer sprite = this.gameObject.GetComponentInChildren<SpriteRenderer>();
+        Color prevColor = sprite.color;
+        Color.RGBToHSV(prevColor, out float H, out float S, out float V);
+        sprite.color = Color.HSVToRGB(H + Time.deltaTime, S, V);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -60,5 +68,7 @@ public class DVDLogo : MonoBehaviour
         }
 
         transform.position += direction*Time.deltaTime*speed;
+
+        this.HueShift();
     }
 }
